@@ -1,27 +1,31 @@
-# AngularChromeExtension
+# Angular Chrome Extension
+Chrome Extension developed in Angular &amp; TypeScript.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+# Prerequisites
+Project was developed using Angular CLI and it's recommended to install it to run the project. Please visit [Angular CLI github](https://github.com/angular/angular-cli) for more details.
 
-## Development server
+Also install the following gulp dependencies which are required to package the content script for the Chrome Extension.
+*  `npm install -g gulp-cli`
+*  `npm install 'gulpjs/gulp.git#4.0' --save-dev`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Similarly, for
+*  `gulp-typescript`
+*  `gulp-sourcemaps`
+*  `gulp-uglify`
+*  `browserify`
+*  `vinyl-source-stream`
+*  `vinyl-buffer tsify`
 
-## Code scaffolding
+# Build & Run
+To build and run the project you need to do the following:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run the following commands in sequence:
+*  `npm install`
+*  `ng serve`
+*  `gulp`
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Then,
+*  Add the Unpacked Extension from 'dist' folder. You need to enable 'Developer Mode' in your Chrome Browser Extension window in order to do this.
+*  Open http://localhost:4200/ in your browser where your angular app is running.
+*  Keep the browser's developer tools opened to see messages in the console.
+*  Click on the extension icon on the top right corner of your browser.

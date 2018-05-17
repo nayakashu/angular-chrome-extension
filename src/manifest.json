@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Angular 4 Test Extension",
+  "version": "1.0.0",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "page": "index.html#/event-page",
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Open Popup!",
+    "default_popup": "index.html#/popup"
+  },
+  "icons": {
+    "16": "assets/chrome-extension/logos/chrome-extension-logo.png",
+    "32": "assets/chrome-extension/logos/chrome-extension-logo.png",    
+    "64": "assets/chrome-extension/logos/chrome-extension-logo.png",
+    "128": "assets/chrome-extension/logos/chrome-extension-logo.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
